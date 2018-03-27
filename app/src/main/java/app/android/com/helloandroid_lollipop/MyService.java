@@ -10,6 +10,7 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.widget.Toast;
 
 public class MyService extends Service {
 
@@ -47,6 +48,7 @@ public class MyService extends Service {
         Uri ringtone_uri = RingtoneManager.getDefaultUri( RingtoneManager.TYPE_RINGTONE );
         ringtone = RingtoneManager.getRingtone(getApplicationContext(), ringtone_uri);
         ringtone.play();
+        Toast.makeText(getApplicationContext(),"Service Start",Toast.LENGTH_LONG).show();
         return START_NOT_STICKY;
     }
     @Override
@@ -54,6 +56,7 @@ public class MyService extends Service {
         Log.d(TAG," "+new Throwable().getStackTrace()[0].getMethodName()+"()"+"#"+new Throwable().getStackTrace()[0].getLineNumber());
         if(ringtone.isPlaying()) {
             ringtone.stop();
+            Toast.makeText(getApplicationContext(),"Service Stop",Toast.LENGTH_LONG).show();
         }
         super.onDestroy();
     }
