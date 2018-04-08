@@ -7,37 +7,32 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity  {
+/**
+ * Created by kjphoto on 2018-04-09.
+ */
 
-    private Button btn_go_to_servce_layout, btn_go_to_youtube_layout;
+public class Layout_Player extends AppCompatActivity {
+
+    private Button btn;
 
     private static final String TAG = "TAG";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_main );
+        setContentView( R.layout.player_layout );
 
         Log.d(TAG," "+new Throwable().getStackTrace()[0].getMethodName()+"()"+"#"+new Throwable().getStackTrace()[0].getLineNumber());
 
         //버튼에 대한 참조
-        btn_go_to_servce_layout = (Button)findViewById(R.id.btn_go_to_servce_layout);
-        btn_go_to_servce_layout.setOnClickListener(new View.OnClickListener(){
+        btn = (Button)findViewById(R.id.button);
+        btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Layout_Service.class);
                 startActivity(intent);
             }
         });
-        btn_go_to_youtube_layout = findViewById(R.id.btn_go_to_youtube_layout);
-        btn_go_to_youtube_layout.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Layout_Player.class);
-                startActivity(intent);
-            }
-        });
-
     }
 
 }

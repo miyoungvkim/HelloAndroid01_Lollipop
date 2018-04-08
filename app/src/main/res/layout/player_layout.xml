@@ -5,16 +5,8 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/btn_go_to_servce_layout"
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Go to Service Layout" />
-
-    <Button
-        android:id="@+id/btn_go_to_youtube_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Go To Youtube Layout" />
-
-
+        android:text="Button" />
 </LinearLayout>

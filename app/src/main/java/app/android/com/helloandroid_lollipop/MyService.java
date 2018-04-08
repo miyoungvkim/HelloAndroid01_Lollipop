@@ -2,7 +2,6 @@ package app.android.com.helloandroid_lollipop;
 
 import android.app.Service;
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -48,15 +47,17 @@ public class MyService extends Service {
         Uri ringtone_uri = RingtoneManager.getDefaultUri( RingtoneManager.TYPE_RINGTONE );
         ringtone = RingtoneManager.getRingtone(getApplicationContext(), ringtone_uri);
         ringtone.play();
+
         Toast.makeText(getApplicationContext(),"Service Start",Toast.LENGTH_LONG).show();
+
         return START_NOT_STICKY;
     }
     @Override
     public void onDestroy() {
         Log.d(TAG," "+new Throwable().getStackTrace()[0].getMethodName()+"()"+"#"+new Throwable().getStackTrace()[0].getLineNumber());
         if(ringtone.isPlaying()) {
-            ringtone.stop();
             Toast.makeText(getApplicationContext(),"Service Stop",Toast.LENGTH_LONG).show();
+            ringtone.stop();
         }
         super.onDestroy();
     }
