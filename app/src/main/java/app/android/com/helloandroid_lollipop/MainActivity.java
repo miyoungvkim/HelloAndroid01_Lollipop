@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import app.android.com.helloandroid_lollipop.tenserflow.CameraActivity;
+
 public class MainActivity extends AppCompatActivity  {
 
     private Button btn_go_to_servce_layout, btn_go_to_youtube_layout;
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity  {
                 startActivity(intent);
             }
         });
-        btn_go_to_youtube_layout = findViewById(R.id.btn_go_to_youtube_layout);
+        btn_go_to_youtube_layout = (Button) findViewById(R.id.btn_go_to_youtube_layout);
         btn_go_to_youtube_layout.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -38,6 +40,16 @@ public class MainActivity extends AppCompatActivity  {
             }
         });
 
+        // add for tenser flow layout
+        Button btn_go_to_tenserflow_layout = (Button) findViewById(R.id.btn_go_to_tenserflow_layout);
+        btn_go_to_tenserflow_layout.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CameraActivity.class);
+                startActivity(intent);
+            }
+        });
+        //
     }
 
 }

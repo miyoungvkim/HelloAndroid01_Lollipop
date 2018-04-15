@@ -45,10 +45,10 @@ public class Layout_Service extends AppCompatActivity implements View.OnClickLis
         Log.d(TAG," "+new Throwable().getStackTrace()[0].getMethodName()+"()"+"#"+new Throwable().getStackTrace()[0].getLineNumber());
 
         //버튼에 대한 참조
-        btn_service_start = findViewById(R.id.btn_service_start);
-        btn_service_stop = findViewById(R.id.btn_service_stop);
-        btn_service_bind = findViewById(R.id.btn_service_bind);
-        btn_service_unbind = findViewById(R.id.btn_service_unbind);
+        btn_service_start = (Button) findViewById(R.id.btn_service_start);
+        btn_service_stop = (Button) findViewById(R.id.btn_service_stop);
+        btn_service_bind = (Button) findViewById(R.id.btn_service_bind);
+        btn_service_unbind = (Button) findViewById(R.id.btn_service_unbind);
 
         //각 버튼에 대한 리스너 연결 - OnClickListener를 확장했으므로 onClick 오버라이딩 후 this사용
         btn_service_start.setOnClickListener(this );

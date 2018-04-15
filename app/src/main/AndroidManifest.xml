@@ -3,6 +3,11 @@
     package="app.android.com.helloandroid_lollipop">
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <!-- add for tenserflow -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!--  -->
 
     <application
         android:allowBackup="true"
@@ -24,9 +29,11 @@
             android:enabled="true"
             android:exported="true"></service>
 
-       <activity android:name=".Layout_Service"/>
-       <activity android:name=".Layout_Player"/>
-
+        <activity android:name=".Layout_Service"/>
+        <activity android:name=".Layout_Player"/>
+        <!-- add for tenserflow -->
+        <activity android:name=".tenserflow.CameraActivity"/>
+        <!--  -->
 
     </application>
 

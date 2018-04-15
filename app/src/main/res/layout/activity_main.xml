@@ -16,5 +16,10 @@
         android:layout_height="wrap_content"
         android:text="Go To Youtube Layout" />
 
+    <Button
+        android:id="@+id/btn_go_to_tenserflow_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go To Tenserflow Layout" />
 
 </LinearLayout>
