@@ -30,7 +30,7 @@
             android:exported="true"></service>
 
         <activity android:name=".Layout_Service"/>
-        <activity android:name=".Layout_Player"/>
+        <activity android:name=".Layout_YoutubePlayer"/>
         <!-- add for tenserflow -->
         <activity android:name=".tenserflow.CameraActivity"/>
         <!--  -->
