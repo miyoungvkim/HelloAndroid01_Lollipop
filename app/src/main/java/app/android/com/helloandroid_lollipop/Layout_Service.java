@@ -40,7 +40,7 @@ public class Layout_Service extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_service_test );
+        setContentView( R.layout.service_layout );
 
         Log.d(TAG," "+new Throwable().getStackTrace()[0].getMethodName()+"()"+"#"+new Throwable().getStackTrace()[0].getLineNumber());
 
