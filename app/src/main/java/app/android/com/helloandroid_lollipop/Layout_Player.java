@@ -1,6 +1,8 @@
 package app.android.com.helloandroid_lollipop;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +16,7 @@ import com.google.android.youtube.player.YouTubePlayerView;
  * Created by kjphoto on 2018-04-09.
  */
 
-public class Layout_YoutubePlayer extends YouTubeBaseActivity {
+public class Layout_Player extends YouTubeBaseActivity {
 
     YouTubePlayerView youtubeView;
     Button button;
@@ -24,7 +26,7 @@ public class Layout_YoutubePlayer extends YouTubeBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_youtubeplay );
+        setContentView( R.layout.player_layout );
 
         Log.d(TAG," "+new Throwable().getStackTrace()[0].getMethodName()+"()"+"#"+new Throwable().getStackTrace()[0].getLineNumber());
 
